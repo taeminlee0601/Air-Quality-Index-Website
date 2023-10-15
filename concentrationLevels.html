@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+
+<!--Adding the metadata and link to Bootstrap-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Air Quality Index </title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<!--Body of the Page-->
+<body>
+  <!--Navigation Bar-->
+  <!--Includes the Title and Search Bar-->
+  <nav class="navbar navbar-expand-lg bg-body-dark" style="background-color: #7ab0d6;">
+    <div class="container-fluid">
+      <!--Title in Top Left-->
+      <a class="navbar-brand" href="#">Air Quality Indexing</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!--Home Button on Navigation Bar-->
+        <!--If clicked, it will redirect to home page (Toronto Air Quality Info)-->
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="index.html">Concentration Levels</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="airQualityIndex.html">Air Quality Index (AQI)</a>
+          </li>
+        </ul>
+        <!--Search Bar and Search Button on Navigation Bar-->
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="city1">
+          <button class="btn btn-light" type="submit" id="submit1">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!--Information about the air quaility of a specific city-->
+  <div class="container my-4">
+    <main>
+
+      <!--Title-->
+      <h1 class="text-center my-4">Concentration of Pollutants in <span id="name1"></span></h1>
+      <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+        <div class="col">
+
+          <!--Box Displaying Information of Carbon Monoxide (CO)-->
+          <div class="card mb-4 rounded-3 shadow-sm">
+            <!--Title of Box-->
+            <div class="card-header py-3">
+              <h4 class="my-0 fw-normal">Carbon Monoxide (CO)</h4>
+            </div>
+            <div class="card-body">
+              <!--Displaying CO Information in ppm (parts per million)-->
+              <ul class="list-unstyled mt-3 mb-1">
+                <li>Concentration of CO is <span id=""></span> </li>
+              </ul>
+              <h1 class="card-title pricing-card-title"><span id="co"></span><small
+                  class="text-body-secondary fw-light"> ppm</small></h1>
+            </div>
+          </div>
+
+        </div>
+        <div class="col">
+
+          <!--Box Displaying Information of Nitrogen Dioxide (NO2)-->
+          <div class="card mb-4 rounded-3 shadow-sm">
+            <!--Title of Box-->
+            <div class="card-header py-3">
+              <h4 class="my-0 fw-normal">Nitrogen Dioxide (NO<sub>2</sub>)</h4>
+            </div>
+            <div class="card-body">
+              <!--Displaying NO2 Information in ppb (parts per billion)-->
+              <ul class="list-unstyled mt-3 mb-1">
+                <li>Concentration of NO<sub>2</sub> is <span id=""></span> </li>
+              </ul>
+              <h1 class="card-title pricing-card-title"><span id="no2"></span><small
+                  class="text-body-secondary fw-light"> ppb</small></h1>
+            </div>
+          </div>
+
+        </div>
+        <div class="col">
+          <!--Box Displaying Information of Ozone (O3)-->
+          <div class="card mb-4 rounded-3 shadow-sm">
+            <!--Title of Box-->
+            <div class="card-header py-3">
+              <h4 class="my-0 fw-normal">Ozone (O<sub>3</sub>)</h4>
+            </div>
+            <div class="card-body">
+              <!--Displaying O3 Information in Dobson-->
+              <ul class="list-unstyled mt-3 mb-1">
+                <li>Concentration of O<sub>3</sub> is <span id=""></span> </li>
+              </ul>
+              <h1 class="card-title pricing-card-title"><span id="o3"></span><small
+                  class="text-body-secondary fw-light"> Dobson</small></h1>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+        <div class="col">
+          <!--Box Displaying Information of Sulphur Dioxide (SO2)-->
+          <div class="card mb-4 rounded-3 shadow-sm">
+            <!--Title of Box-->
+            <div class="card-header py-3">
+              <h4 class="my-0 fw-normal">Sulphur Dioxide (SO<sub>2</sub>)</h4>
+            </div>
+            <div class="card-body">
+              <!--Displaying SO2 Information in ppm (parts per million)-->
+              <ul class="list-unstyled mt-3 mb-1">
+                <li>Concentration of SO<sub>2</sub> is <span id=""></span> </li>
+              </ul>
+              <h1 class="card-title pricing-card-title"><span id="so2"></span><small
+                  class="text-body-secondary fw-light"> ppm</small></h1>
+            </div>
+          </div>
+
+        </div>
+        <div class="col">
+          <!--Box Displaying Information of PM2.5-->
+          <div class="card mb-4 rounded-3 shadow-sm">
+            <!--Title of Box-->
+            <div class="card-header py-3">
+              <h4 class="my-0 fw-normal">PM2.5</h4>
+            </div>
+            <div class="card-body">
+              <!--Displaying PM2.5 Information in μg/m3 (micrograms per cubic meter)-->
+              <ul class="list-unstyled mt-3 mb-1">
+                <li>Concentration of PM2.5 is <span id=""></span> </li>
+              </ul>
+              <h1 class="card-title pricing-card-title"><span id="pm25"></span><small
+                  class="text-body-secondary fw-light"> μg/m<sup>3</sup></small></h1>
+            </div>
+          </div>
+
+        </div>
+        <div class="col">
+          <!--Box Displaying Information of PM10-->
+          <div class="card mb-4 rounded-3 shadow-sm">
+            <div class="card-header py-3">
+              <!--Title of Box-->
+              <h4 class="my-0 fw-normal">PM10</h4>
+            </div>
+            <div class="card-body">
+              <!--Displaying PM10 Information in mg/m3 (miligrams per cubic meter)-->
+              <ul class="list-unstyled mt-3 mb-1">
+                <li>Concentration of PM10 is <span id=""></span> </li>
+              </ul>
+              <h1 class="card-title pricing-card-title"><span id="pm10"></span><small
+                  class="text-body-secondary fw-light"> mg/m<sup>3</sup></small></h1>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!--Table Showing Information about Major Cities-->
+      <!--Major Cities include New York, Toronto, Berlin, Mumbai-->
+      <div class="table-responsive">
+        <caption>
+          <table class="table text-center">
+            <thead>
+              <tr>
+                <!--Column Information-->
+                <th>Metro Cities</th>
+                <th>CO (ppm)</th>
+                <th>NO2 (ppb)</th>
+                <th>O3 (Dobson)</th>
+                <th>SO2 (ppm)</th>
+                <th>PM2.5 (μg/m<sup>3</sup>)</th>
+                <th>PM10 (mg/m<sup>3</sup>)</th>
+
+            </thead>
+            <tbody>
+              <tr>
+                <!--Information of Toronto-->
+                <td class="text-center"><strong>Toronto</strong></td>
+                <td id="TorontoCO">1</td>
+                <td id="TorontoNO2">1</td>
+                <td id="TorontoO3">1</td>
+                <td id="TorontoSO2">1</td>
+                <td id="TorontoPM25">1</td>
+                <td id="TorontoPM10">1</td>
+
+
+              </tr>
+              <tr>
+                <!--Information of New York-->
+                <td class="text-center"><strong> New York</strong></td>
+                <td id="New YorkCO">1</td>
+                <td id="New YorkNO2">1</td>
+                <td id="New YorkO3">1</td>
+                <td id="New YorkSO2">1</td>
+                <td id="New YorkPM25">1</td>
+                <td id="New YorkPM10">1</td>
+                
+
+              </tr>
+            </tbody>
+
+            <tbody>
+              <tr>
+                <!--Information of Mumbai-->
+                <td class="text-center"><strong>Mumbai</strong></td>
+                <td id="MumbaiCO">1</td>
+                <td id="MumbaiNO2">1</td>
+                <td id="MumbaiO3">1</td>
+                <td id="MumbaiSO2">1</td>
+                <td id="MumbaiPM25">1</td>
+                <td id="MumbaiPM10">1</td>
+
+
+              </tr>
+              <tr>
+                <!--Information of Berlin-->
+                <td class="text-center"><strong> Berlin</strong></td>
+                <td id="BerlinCO">1</td>
+                <td id="BerlinNO2">1</td>
+                <td id="BerlinO3">1</td>
+                <td id="BerlinSO2">1</td>
+                <td id="BerlinPM25">1</td>
+                <td id="BerlinPM10">1</td>
+
+
+              </tr>
+
+            </tbody>
+          </table>
+      </div>
+    </main>
+
+  <!--Footer-->
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <script src="script_concentration.js"></script>
+</body>
+
+</html>
