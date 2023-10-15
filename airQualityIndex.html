@@ -23,14 +23,16 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <!--Home Button on Navigation Bar-->
-        <!--If clicked, it will redirect to home page (Toronto Air Quality Info)-->
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <!--Concentration Level Button on Navigation Bar-->
+          <!--If clicked, it will redirect to concentraction level page (Toronto Pollutants Concentration Level)-->
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="index.html">Concentration Levels</a>
           </li>
+          <!--Air Quality Index Button on Navigation Bar-->
+          <!--If clicked, it will redirect to air quality index page (Toronto Air Quality Index)-->
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="airQualityIndex.html">Air Quality Index (AQI)</a>
+            <a class="nav-link active" aria-current="page" href="index.html">Air Quality Index (AQI)</a>
           </li>
         </ul>
         <!--Search Bar and Search Button on Navigation Bar-->
@@ -47,7 +49,29 @@
     <main>
 
       <!--Title-->
-      <h1 class="text-center my-4">Concentration of Pollutants in <span id="name1"></span></h1>
+      <h1 class="text-center my-4">Air Quality Index (AQI) Levels in <span id="name1"></span></h1>
+
+      <div class="row row-cols-1 row-cols-md-1 mb-1 text-center">
+        <div class="col">
+
+            <!--Box Displaying Information of Carbon Monoxide (CO)-->
+            <div class="card mb-4 rounded-3 shadow-sm">
+              <!--Title of Box-->
+              <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">Overall AQI Level</h4>
+              </div>
+              <div class="card-body">
+                <!--Displaying CO Information-->
+                <ul class="list-unstyled mt-3 mb-1">
+                  <li>Value of Index of the Overall AQI is <span id=""></span> </li>
+                </ul>
+                <h1 class="card-title pricing-card-title"><span id="overall_aqi"></span></h1>
+              </div>
+            </div>
+  
+          </div>
+      </div>
+
       <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
         <div class="col">
 
@@ -58,12 +82,11 @@
               <h4 class="my-0 fw-normal">Carbon Monoxide (CO)</h4>
             </div>
             <div class="card-body">
-              <!--Displaying CO Information in ppm (parts per million)-->
+              <!--Displaying CO Information-->
               <ul class="list-unstyled mt-3 mb-1">
-                <li>Concentration of CO is <span id=""></span> </li>
+                <li>Value of Index of CO is <span id=""></span> </li>
               </ul>
-              <h1 class="card-title pricing-card-title"><span id="co"></span><small
-                  class="text-body-secondary fw-light"> ppm</small></h1>
+              <h1 class="card-title pricing-card-title"><span id="co"></span></h1>
             </div>
           </div>
 
@@ -77,12 +100,11 @@
               <h4 class="my-0 fw-normal">Nitrogen Dioxide (NO<sub>2</sub>)</h4>
             </div>
             <div class="card-body">
-              <!--Displaying NO2 Information in ppb (parts per billion)-->
+              <!--Displaying NO2 Information-->
               <ul class="list-unstyled mt-3 mb-1">
-                <li>Concentration of NO<sub>2</sub> is <span id=""></span> </li>
+                <li>Value of Index of NO<sub>2</sub> is <span id=""></span> </li>
               </ul>
-              <h1 class="card-title pricing-card-title"><span id="no2"></span><small
-                  class="text-body-secondary fw-light"> ppb</small></h1>
+              <h1 class="card-title pricing-card-title"><span id="no2"></span></h1>
             </div>
           </div>
 
@@ -95,12 +117,11 @@
               <h4 class="my-0 fw-normal">Ozone (O<sub>3</sub>)</h4>
             </div>
             <div class="card-body">
-              <!--Displaying O3 Information in Dobson-->
+              <!--Displaying O3 Information-->
               <ul class="list-unstyled mt-3 mb-1">
-                <li>Concentration of O<sub>3</sub> is <span id=""></span> </li>
+                <li>Value of Index of O<sub>3</sub> is <span id=""></span> </li>
               </ul>
-              <h1 class="card-title pricing-card-title"><span id="o3"></span><small
-                  class="text-body-secondary fw-light"> Dobson</small></h1>
+              <h1 class="card-title pricing-card-title"><span id="o3"></span></h1>
             </div>
           </div>
 
@@ -115,12 +136,11 @@
               <h4 class="my-0 fw-normal">Sulphur Dioxide (SO<sub>2</sub>)</h4>
             </div>
             <div class="card-body">
-              <!--Displaying SO2 Information in ppm (parts per million)-->
+              <!--Displaying SO2 Information-->
               <ul class="list-unstyled mt-3 mb-1">
-                <li>Concentration of SO<sub>2</sub> is <span id=""></span> </li>
+                <li>Value of Index of SO<sub>2</sub> is <span id=""></span> </li>
               </ul>
-              <h1 class="card-title pricing-card-title"><span id="so2"></span><small
-                  class="text-body-secondary fw-light"> ppm</small></h1>
+              <h1 class="card-title pricing-card-title"><span id="so2"></span></h1>
             </div>
           </div>
 
@@ -133,12 +153,11 @@
               <h4 class="my-0 fw-normal">PM2.5</h4>
             </div>
             <div class="card-body">
-              <!--Displaying PM2.5 Information in μg/m3 (micrograms per cubic meter)-->
+              <!--Displaying PM2.5 Information-->
               <ul class="list-unstyled mt-3 mb-1">
-                <li>Concentration of PM2.5 is <span id=""></span> </li>
+                <li>Value of Index of PM2.5 is <span id=""></span> </li>
               </ul>
-              <h1 class="card-title pricing-card-title"><span id="pm25"></span><small
-                  class="text-body-secondary fw-light"> μg/m<sup>3</sup></small></h1>
+              <h1 class="card-title pricing-card-title"><span id="pm25"></span></h1>
             </div>
           </div>
 
@@ -151,12 +170,11 @@
               <h4 class="my-0 fw-normal">PM10</h4>
             </div>
             <div class="card-body">
-              <!--Displaying PM10 Information in mg/m3 (miligrams per cubic meter)-->
+              <!--Displaying PM10 Information-->
               <ul class="list-unstyled mt-3 mb-1">
-                <li>Concentration of PM10 is <span id=""></span> </li>
+                <li>Value of Index of PM10 is <span id=""></span> </li>
               </ul>
-              <h1 class="card-title pricing-card-title"><span id="pm10"></span><small
-                  class="text-body-secondary fw-light"> mg/m<sup>3</sup></small></h1>
+              <h1 class="card-title pricing-card-title"><span id="pm10"></span></h1>
             </div>
           </div>
         </div>
@@ -172,30 +190,34 @@
               <tr>
                 <!--Column Information-->
                 <th>Metro Cities</th>
-                <th>CO (ppm)</th>
-                <th>NO2 (ppb)</th>
-                <th>O3 (Dobson)</th>
-                <th>SO2 (ppm)</th>
-                <th>PM2.5 (μg/m<sup>3</sup>)</th>
-                <th>PM10 (mg/m<sup>3</sup>)</th>
+                <th>Overall</th>
+                <th>CO</th>
+                <th>NO2</th>
+                <th>O3</th>
+                <th>SO2</th>
+                <th>PM2.5</th>
+                <th>PM10</th>
 
             </thead>
             <tbody>
-              <tr>
-                <!--Information of Toronto-->
-                <td class="text-center"><strong>Toronto</strong></td>
-                <td id="TorontoCO">1</td>
-                <td id="TorontoNO2">1</td>
-                <td id="TorontoO3">1</td>
-                <td id="TorontoSO2">1</td>
-                <td id="TorontoPM25">1</td>
-                <td id="TorontoPM10">1</td>
+                <tr>
+                    <!--Information of Toronto-->
+                    <td class="text-center"><strong>Toronto</strong></td>
+                    <td id="TorontoAQI">1</td>
+                    <td id="TorontoCO">1</td>
+                    <td id="TorontoNO2">1</td>
+                    <td id="TorontoO3">1</td>
+                    <td id="TorontoSO2">1</td>
+                    <td id="TorontoPM25">1</td>
+                    <td id="TorontoPM10">1</td>
 
+    
+                </tr>
 
-              </tr>
               <tr>
                 <!--Information of New York-->
                 <td class="text-center"><strong> New York</strong></td>
+                <td id="New YorkAQI">1</td>
                 <td id="New YorkCO">1</td>
                 <td id="New YorkNO2">1</td>
                 <td id="New YorkO3">1</td>
@@ -211,6 +233,7 @@
               <tr>
                 <!--Information of Mumbai-->
                 <td class="text-center"><strong>Mumbai</strong></td>
+                <td id="MumbaiAQI">1</td>
                 <td id="MumbaiCO">1</td>
                 <td id="MumbaiNO2">1</td>
                 <td id="MumbaiO3">1</td>
@@ -223,6 +246,7 @@
               <tr>
                 <!--Information of Berlin-->
                 <td class="text-center"><strong> Berlin</strong></td>
+                <td id="BerlinAQI">1</td>
                 <td id="BerlinCO">1</td>
                 <td id="BerlinNO2">1</td>
                 <td id="BerlinO3">1</td>
@@ -236,6 +260,9 @@
             </tbody>
           </table>
       </div>
+
+      <!--Chart Showing Information about AQI Index Values-->
+      <img src="InfoChart.jpg">
     </main>
 
   <!--Footer-->
@@ -243,7 +270,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
     crossorigin="anonymous"></script>
-  <script src="script_concentration.js"></script>
+  <script src="script_aqi.js"></script>
 </body>
 
 </html>
