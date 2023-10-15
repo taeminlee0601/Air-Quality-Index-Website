@@ -116,7 +116,7 @@ function displayAQILevelTable(city) {
 // Returns the color of the AQI level
 function getColor(value) {
     if (value >= 0 && value <= 50) {
-        return "green";
+        return "lawngreen";
     } else if (value >= 51 && value <= 100) {
         return "gold";
     } else if (value >= 101 && value <= 150) {
